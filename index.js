@@ -57,7 +57,7 @@ app.post('/createMessage', (req, res) => {
     console.log(fecha, "date");
   
       axios({
-        url: 'http://localhost:3030/graphql',
+        url: 'https://back-bimbo.herokuapp.com/graphql',
         method: 'post',
         data: {
           query: `
@@ -111,7 +111,7 @@ app.use(
     '/graphiql',
     graphiqlExpress({
       endpointURL: '/graphql',
-      subscriptionsEndpoint: 'ws://localhost:3030/graphql',
+      subscriptionsEndpoint: 'ws://back-bimbo.herokuapp.com/graphql',
     })
 );
 

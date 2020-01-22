@@ -82,7 +82,7 @@ app.post('/createMessage', function (req, res) {
     console.log(fecha, "date");
 
     axios({
-      url: 'http://localhost:3030/graphql',
+      url: 'https://back-bimbo.herokuapp.com/graphql',
       method: 'post',
       data: {
         query: '\n              mutation{\n                  addMessage(\n                      device:"' + message.device + '",\n                      timestamp:"' + fecha + '",\n                      data:"' + message.data + '"\n                  ){\n                      device\n                  }\n              }\n          '
@@ -120,7 +120,7 @@ app.use('/graphql', graphqlExpress({
 // ws://movilidad-back.herokuapp.com/graphql
 app.use('/graphiql', graphiqlExpress({
   endpointURL: '/graphql',
-  subscriptionsEndpoint: 'ws://localhost:3030/graphql'
+  subscriptionsEndpoint: 'ws://back-bimbo.herokuapp.com/graphql'
 }));
 
 var PORT = process.env.PORT || 3030;
