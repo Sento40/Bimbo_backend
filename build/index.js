@@ -120,7 +120,7 @@ app.use('/graphql', graphqlExpress({
 // ws://movilidad-back.herokuapp.com/graphql
 app.use('/graphiql', graphiqlExpress({
   endpointURL: '/graphql',
-  subscriptionsEndpoint: 'ws://back-bimbo.herokuapp.com/graphql'
+  subscriptionsEndpoint: 'wss://back-bimbo.herokuapp.com/graphql'
 }));
 
 var PORT = process.env.PORT || 3030;

@@ -111,7 +111,7 @@ app.use(
     '/graphiql',
     graphiqlExpress({
       endpointURL: '/graphql',
-      subscriptionsEndpoint: 'ws://back-bimbo.herokuapp.com/graphql',
+      subscriptionsEndpoint: 'wss://back-bimbo.herokuapp.com/graphql',
     })
 );
 
