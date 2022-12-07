@@ -27,7 +27,7 @@
     "cors": "^2.8.4",
     "date-from-timestamp": "^2.0.0",
     "event-stream": "^4.0.1",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.2",
     "graphql-subscriptions": "^0.5.7",
